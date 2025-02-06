@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data flavor="com.sonarsource.architecture.export.java" version="1.0.0" site="https://www.sonarsource.com/">
+  <modules>
+    <module id="700518240" type="folder" name="&lt;externals&gt;" fat="22">
+      <submodule id="-1997467566" type="folder" name="org" fat="21">
+        <submodule id="-521711947" type="folder" name="springframework" fat="20">
+          <submodule id="814237878" type="folder" name="context" fat="2">
+            <submodule id="-1749699412" type="unknown" name="ConfigurableApplicationContext" fat="1" />
+          </submodule>
+          <submodule id="1566712603" type="folder" name="web" fat="6">
+            <submodule id="-1397122292" type="folder" name="bind" fat="5">
+              <submodule id="-1832362195" type="folder" name="annotation" fat="4">
+                <submodule id="736983651" type="unknown" name="GetMapping" fat="1" />
+                <submodule id="-1417313045" type="unknown" name="RestController" fat="1" />
+                <submodule id="325355709" type="unknown" name="RequestParam" fat="1" />
+              </submodule>
+            </submodule>
+          </submodule>
+          <submodule id="727784103" type="folder" name="boot" fat="5">
+            <submodule id="838809948" type="unknown" name="SpringApplication" fat="1" />
+            <submodule id="432280784" type="folder" name="autoconfigure" fat="2">
+              <submodule id="-2068201819" type="unknown" name="SpringBootApplication" fat="1" />
+            </submodule>
+            <submodule id="1497548487" type="unknown" name="SpringApplication#run(Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;" fat="1" />
+          </submodule>
+          <submodule id="-1901123161" type="folder" name="stereotype" fat="2">
+            <submodule id="-1123645782" type="unknown" name="Service" fat="1" />
+          </submodule>
+          <submodule id="-882771702" type="folder" name="beans" fat="4">
+            <submodule id="190093606" type="folder" name="factory" fat="3">
+              <submodule id="-99783469" type="folder" name="annotation" fat="2">
+                <submodule id="-498436893" type="unknown" name="Autowired" fat="1" />
+              </submodule>
+            </submodule>
+          </submodule>
+        </submodule>
+      </submodule>
+    </module>
+    <module id="1462517774" type="file" name="src/main/java/com/example/demo/service/impl/GreetingServiceImpl.java" fat="5">
+      <submodule id="-692106761" type="class" name="GreetingServiceImpl" fat="4">
+        <submodule id="1946256683" type="field" name="counter" fat="1" />
+        <submodule id="-608672384" type="method" name="getGreetingMessage" fat="1" />
+        <submodule id="-39433805" type="field" name="template" fat="1" />
+      </submodule>
+    </module>
+    <module id="1963926934" type="file" name="src/main/java/com/example/demo/DemoApplication.java" fat="3">
+      <submodule id="2046775493" type="class" name="DemoApplication" fat="2">
+        <submodule id="1087013140" type="method" name="main" fat="1" />
+      </submodule>
+    </module>
+    <module id="1944416449" type="file" name="src/main/java/com/example/demo/service/GreetingService.java" fat="3">
+      <submodule id="-590352080" type="interface" name="GreetingService" fat="2">
+        <submodule id="822997624" type="method" name="getGreetingMessage" fat="1" />
+      </submodule>
+    </module>
+    <module id="977554943" type="file" name="src/main/java/com/example/demo/pojo/Greeting.java" fat="9">
+      <submodule id="132960463" type="class" name="Greeting" fat="8">
+        <submodule id="-438414702" type="method" name="setId" fat="1" />
+        <submodule id="721352911" type="method" name="setContent" fat="1" />
+        <submodule id="-1460708442" type="field" name="content" fat="1" />
+        <submodule id="-1575819543" type="method" name="getContent" fat="1" />
+        <submodule id="-1960434829" type="method" name="Greeting" fat="1" />
+        <submodule id="1565859128" type="method" name="getId" fat="1" />
+        <submodule id="596812314" type="field" name="id" fat="1" />
+      </submodule>
+    </module>
+    <module id="1700176091" type="file" name="src/main/java/com/example/demo/controller/GreetingController.java" fat="4">
+      <submodule id="2105558635" type="class" name="GreetingController" fat="3">
+        <submodule id="1672744011" type="method" name="greeting" fat="1" />
+        <submodule id="958824031" type="field" name="greetingService" fat="1" />
+      </submodule>
+    </module>
+  </modules>
+  <dependencies>
+    <dependency from="-692106761" to="-590352080" type="implements" />
+    <dependency from="-692106761" to="-1123645782" type="annotated by" />
+    <dependency from="-608672384" to="132960463" type="returns" />
+    <dependency from="-608672384" to="1946256683" type="references" />
+    <dependency from="-608672384" to="-39433805" type="references" />
+    <dependency from="2046775493" to="-2068201819" type="annotated by" />
+    <dependency from="1087013140" to="-1749699412" type="returns" />
+    <dependency from="1087013140" to="838809948" type="references" />
+    <dependency from="1087013140" to="1497548487" type="calls" />
+    <dependency from="1087013140" to="2046775493" type="uses" />
+    <dependency from="822997624" to="132960463" type="returns" />
+    <dependency from="-438414702" to="132960463" type="uses" />
+    <dependency from="-438414702" to="596812314" type="references" />
+    <dependency from="721352911" to="132960463" type="uses" />
+    <dependency from="721352911" to="-1460708442" type="references" />
+    <dependency from="-1575819543" to="-1460708442" type="references" />
+    <dependency from="-1960434829" to="132960463" type="calls" />
+    <dependency from="-1960434829" to="596812314" type="references" />
+    <dependency from="-1960434829" to="-1460708442" type="references" />
+    <dependency from="1565859128" to="596812314" type="references" />
+    <dependency from="2105558635" to="-1417313045" type="annotated by" />
+    <dependency from="1672744011" to="132960463" type="returns" />
+    <dependency from="1672744011" to="736983651" type="annotated by" />
+    <dependency from="1672744011" to="325355709" type="annotated by" />
+    <dependency from="1672744011" to="-590352080" type="references" />
+    <dependency from="1672744011" to="822997624" type="calls" />
+    <dependency from="1672744011" to="958824031" type="references" />
+    <dependency from="958824031" to="-590352080" type="is type" />
+    <dependency from="958824031" to="-498436893" type="annotated by" />
+  </dependencies>
+</data>

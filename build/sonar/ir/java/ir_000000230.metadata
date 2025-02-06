@@ -1,0 +1,4 @@
+com.example.demo.DemoApplication#main([Ljava/lang/String;)V
+false
+a5bd1f36e7bc3ba32ab8e07ba81870f1
+org.springframework.boot.SpringApplication#run(Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;

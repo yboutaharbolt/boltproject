@@ -1,0 +1,70 @@
+# Gradle
+# Build your Java project and run tests with Gradle using a Gradle wrapper script.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    fetchDepth: 0
+  # Étape 1 : Installer Java 17
+  - task: JavaToolInstaller@1
+    inputs:
+      versionSpec: '17'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
+
+  # Étape 2 : Vérifier la version de Java installe
+  - script: java -version
+    displayName: 'Vérification de la version de Java'
+
+  # Étape 3 : Configurer les permissions pour le script Gradle Wrapper
+  - script: chmod +x gradlew
+    displayName: 'Rendre le Gradle Wrapper exécutable'
+  - task: SonarCloudPrepare@3
+    inputs:
+      SonarQube: 'sonarqube cloud'
+      organization: 'yassineboutahar'
+      scannerMode: 'other'
+      extraProperties: |
+        sonar.projectKey=yassineboutahar_boltProject
+        sonar.projectName=boltProject
+  # Étape 4 : Télécharger les dépendances et compiler le projet
+  - task: Gradle@3
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      tasks: 'build'
+      options: '--stacktrace --info'
+    displayName: 'Télécharger les dépendances et compiler le projet'
+  - task: Gradle@3
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      tasks: 'build'
+      sonarQubeRunAnalysis: true
+      sqGradlePluginVersionChoice: 'build'
+      spotBugsAnalysis: false
+      
+  - task: SonarCloudAnalyze@3
+    inputs:
+      jdkversion: 'JAVA_HOME_17_X64'
+  - task: SonarCloudPublish@3
+    inputs:
+      pollingTimeoutSec: '300'
+  # Étape 5 : Exécuter les tests avec JUnit
+  - task: Gradle@3
+    inputs:
+      gradleWrapperFile: 'gradlew'
+      tasks: 'test'
+      options: '--stacktrace --info'
+      publishJUnitResults: true
+      testResultsFiles: '**/build/test-results/test/*.xml'
+    displayName: 'Exécuter les tests unitaires'
+
+  - task: WhiteSource@21
+    inputs:
+      cwd: '$(System.DefaultWorkingDirectory)'

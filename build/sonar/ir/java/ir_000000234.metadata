@@ -1,0 +1,5 @@
+com.example.demo.service.impl.GreetingServiceImpl#instance-init#
+false
+42a8432c479a4ad1ea343d0f2dbab653
+java.util.concurrent.atomic.AtomicLong#<init>()V
+java.util.concurrent.atomic.AtomicLong#instance-init#
