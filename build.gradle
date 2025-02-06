@@ -9,7 +9,7 @@ sonarqube {
 		property "sonar.projectKey", "yassineboutahar_boltProject"
 		property "sonar.organization", "yassineboutahar"
 		property "sonar.host.url", "https://sonarcloud.io"  // For SonarCloud
-		property "sonar.token", "422e3013538beb8e9673d2735d37ac4dc94f11c8"     // Authentication Token
+		property "sonar.token", "fb97c359215bb6939b342dad8f1ec0b45f0c947a"     // Authentication Token
 	}
 }
 group = 'com.example'
