@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.demo.DemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T16:05:50" hostname="MacBook-Pro-de-Yassine.local" time="1.118">
+<testsuite name="com.example.demo.DemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T16:12:05" hostname="MacBook-Pro-de-Yassine.local" time="1.048">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.demo.DemoApplicationTests" time="1.118"/>
-  <system-out><![CDATA[17:05:47.412 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:05:47.570 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+  <testcase name="contextLoads()" classname="com.example.demo.DemoApplicationTests" time="1.048"/>
+  <system-out><![CDATA[17:12:02.538 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:12:02.731 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,9 +14,9 @@
 
  :: Spring Boot ::                (v3.4.0)
 
-2025-02-06T17:05:48.288+01:00  INFO 35790 --- [demo] [    Test worker] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.6 with PID 35790 (started by yassineboutahar in /Users/yassineboutahar/Downloads/gradleProject-bol-github)
-2025-02-06T17:05:48.290+01:00  INFO 35790 --- [demo] [    Test worker] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-02-06T17:05:50.286+01:00  INFO 35790 --- [demo] [    Test worker] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 2.47 seconds (process running for 4.24)
+2025-02-06T17:12:03.462+01:00  INFO 39489 --- [demo] [    Test worker] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.6 with PID 39489 (started by yassineboutahar in /Users/yassineboutahar/Downloads/gradleProject-bol-github)
+2025-02-06T17:12:03.464+01:00  INFO 39489 --- [demo] [    Test worker] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-02-06T17:12:05.582+01:00  INFO 39489 --- [demo] [    Test worker] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 2.588 seconds (process running for 4.413)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
