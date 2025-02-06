@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: ubuntu-latest
@@ -65,6 +65,4 @@ steps:
       testResultsFiles: '**/build/test-results/test/*.xml'
     displayName: 'Exécuter les tests unitaires'
 
-  - task: WhiteSource@21
-    inputs:
-      cwd: '$(System.DefaultWorkingDirectory)'
+ 
