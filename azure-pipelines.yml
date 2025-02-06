@@ -31,10 +31,10 @@ steps:
       SonarCloud: 'sonarqube cloud'  # Assurez-vous que le nom de votre connexion SonarCloud est correct
       organization: 'yboutaharbolt'  # Votre organisation SonarCloud
       projectKey: 'yboutaharbolt_boltproject'  # Clé du projet SonarCloud
-      projectName: 'boltProject'  # Nom du projet SonarCloud
+      projectName: 'boltproject'  # Nom du projet SonarCloud
       scannerMode: 'CLI'
       extraProperties: |
-       sonar.login='85ea72744d0e8da1785fe97b1b56e076ceb4bb5d'  
+       sonar.login='b6f59fa481940beb60c73d17bc3d7f9e871948b6'  
        sonar.organization='yboutaharbolt'
 
   # Étape 4 : Télécharger les dépendances et compiler le projet
@@ -69,4 +69,3 @@ steps:
       testResultsFiles: '**/build/test-results/test/*.xml'
     displayName: 'Exécuter les tests unitaires'
 
- 
