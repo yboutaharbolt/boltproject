@@ -35,6 +35,7 @@ steps:
       scannerMode: 'CLI'
       extraProperties: |
        sonar.login=$(SONAR_TOKEN)  
+       sonar.projectKey='yboutaharbolt_boltproject'
 
   # Étape 4 : Télécharger les dépendances et compiler le projet
   - task: Gradle@3
@@ -54,6 +55,11 @@ steps:
   - task: SonarCloudAnalyze@3
     inputs:
       jdkversion: 'JAVA_HOME_17_X64'
+  - task: SonarCloudAnalyze@3
+    inputs:
+      jdkversion: 'JAVA_HOME_17_X64'  # Votre version de JDK
+      sonar.projectKey: 'yboutaharbolt_boltproject'  # Clé de votre projet SonarCloud
+
   - task: SonarCloudPublish@3
     inputs:
       pollingTimeoutSec: '300'
