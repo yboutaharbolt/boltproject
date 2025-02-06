@@ -6,10 +6,10 @@ plugins {
 }
 sonarqube {
 	properties {
-		property "sonar.projectKey", "yassineboutahar_boltProject"
-		property "sonar.organization", "yassineboutahar"
+		property "sonar.projectKey", "yboutaharbolt_boltproject"
+		property "sonar.organization", "yboutaharbolt"
 		property "sonar.host.url", "https://sonarcloud.io"  // For SonarCloud
-		property "sonar.token", "fb97c359215bb6939b342dad8f1ec0b45f0c947a"     // Authentication Token
+		property "sonar.token", "fc874f232fb00adaab64d3103a189302bec7198a"     // Authentication Token
 	}
 }
 group = 'com.example'
