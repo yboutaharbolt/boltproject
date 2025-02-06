@@ -29,10 +29,10 @@ steps:
   - task: SonarCloudPrepare@3
     inputs:
       SonarQube: 'sonarqube cloud'
-      organization: 'yassineboutahar'
+      organization: 'yboutaharbolt'
       scannerMode: 'other'
       extraProperties: |
-        sonar.projectKey=yassineboutahar_boltProject
+        sonar.projectKey=yboutaharbolt_boltproject
         sonar.projectName=boltProject
   # Étape 4 : Télécharger les dépendances et compiler le projet
   - task: Gradle@3
