@@ -36,6 +36,8 @@ steps:
       extraProperties: |
        sonar.login=$(SONAR_TOKEN)  
        sonar.projectKey='yboutaharbolt_boltproject'
+       sonar.organization='yboutaharbolt'
+       sonar.projectName='boltProject'
 
   # Étape 4 : Télécharger les dépendances et compiler le projet
   - task: Gradle@3
