@@ -1,0 +1,1 @@
+[![Build Status](https://dev.azure.com/yassineboutahar/boltProject/_apis/build/status%2Fyboutaharbolt.boltproject?branchName=main)](https://dev.azure.com/yassineboutahar/boltProject/_build/latest?definitionId=7&branchName=main)
