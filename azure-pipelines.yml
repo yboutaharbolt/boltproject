@@ -28,14 +28,12 @@ steps:
     displayName: 'Rendre le Gradle Wrapper exécutable'
   - task: SonarCloudPrepare@3
     inputs:
-      SonarCloud: 'sonarqube cloud'  # Assurez-vous que le nom de votre connexion SonarCloud est correct
-      organization: 'yboutaharbolt'  # Votre organisation SonarCloud
+      SonarCloud: 'sonarqube cloud'  # Nom de la connexion SonarCloud
+      organization: 'yboutaharbolt'  # Organisation SonarCloud
       projectKey: 'yboutaharbolt_boltproject'  # Clé du projet SonarCloud
-      projectName: 'boltproject'  # Nom du projet SonarCloud
       scannerMode: 'CLI'
       extraProperties: |
-       sonar.login='b6f59fa481940beb60c73d17bc3d7f9e871948b6'  
-       sonar.organization='yboutaharbolt'
+        sonar.login='b6f59fa481940beb60c73d17bc3d7f9e871948b6'
 
   # Étape 4 : Télécharger les dépendances et compiler le projet
   - task: Gradle@3
