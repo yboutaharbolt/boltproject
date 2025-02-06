@@ -34,7 +34,7 @@ steps:
       projectName: 'boltProject'  # Nom du projet SonarCloud
       scannerMode: 'CLI'
       extraProperties: |
-       sonar.login=$(SONAR_TOKEN)  
+       sonar.login='85ea72744d0e8da1785fe97b1b56e076ceb4bb5d'  
        sonar.organization='yboutaharbolt'
 
   # Étape 4 : Télécharger les dépendances et compiler le projet
